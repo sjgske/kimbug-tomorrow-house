@@ -39,8 +39,6 @@ $lg-columns: 12;
 $lg-unit: 75px;
 $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
 
-@debug ($lg-unit + $gutter) * $lg-columns;
-
 .container {
   width: 100%;
   padding: 0 $sm-margin;
