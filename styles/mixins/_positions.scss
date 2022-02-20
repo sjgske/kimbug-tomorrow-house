@@ -11,7 +11,7 @@
   // 인자 없을 때는 기본으로 absolute
   @if ($type == fixed or $type == absolute) {
     position: $type;
-    left: 50%;
+    top: 50%;
     transform: translateY(-50%);
   }
 }
