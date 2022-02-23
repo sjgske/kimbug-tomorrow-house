@@ -50,7 +50,7 @@
                   type="button"
                   aria-label="메뉴 열기 버튼"
                 >
-                  <i class="ic-menu"></i>
+                  <i class="ic-menu" aria-hidden></i>
                 </button>
               </div>
 
@@ -71,7 +71,7 @@
                     type="button"
                     aria-label="검색창 열기 버튼"
                   >
-                    <i class="ic-search"></i>
+                    <i class="ic-search" aria-hidden></i>
                   </button>
 
                   <a
@@ -79,7 +79,7 @@
                     href="/"
                     aria-label="스크랩북 페이지로 이동"
                   >
-                    <i class="ic-bookmark"></i>
+                    <i class="ic-bookmark" aria-hidden></i>
                   </a>
 
                   <a
@@ -87,7 +87,7 @@
                     href="/"
                     aria-label="내 소식 페이지로 이동"
                   >
-                    <i class="ic-bell"></i>
+                    <i class="ic-bell" aria-hidden></i>
                   </a>
 
                   <a
@@ -95,13 +95,13 @@
                     href="/"
                     aria-label="장바구니 페이지로 이동"
                   >
-                    <i class="ic-cart"></i>
+                    <i class="ic-cart" aria-hidden></i>
                     <strong class="badge">5</strong>
                   </a>
 
                   <div class="my-menu sm-hidden">
                     <button
-                      class="my-menu-button is-active"
+                      class="my-menu-button"
                       type="button"
                       aria-label="마이메뉴 열기 버튼"
                     >
@@ -134,14 +134,14 @@
                     type="button"
                     aria-label="검색창 열기 버튼"
                   >
-                    <i class="ic-search"></i>
+                    <i class="ic-search" aria-hidden></i>
                   </button>
                   <a
                     class="gnb-icon-button is-cart"
                     href="/"
                     aria-label="장바구니 페이지로 이동"
                   >
-                    <i class="ic-cart"></i>
+                    <i class="ic-cart" aria-hidden></i>
                   </a>
                   <div class="gnb-auth sm-hidden">
                     <a href="/">로그인</a>
@@ -159,5 +159,86 @@
         </div>
       </div>
     </header>
+
+    <aside class="sidebar sm-only">
+      <header class="sidebar-header">
+        <h1 class="logo">
+          <a href="/">
+            <img src="assets/images/logo.svg" alt="내일의집" />
+          </a>
+        </h1>
+
+        <!-- NOTE: 로그인을 한 경우 -->
+        <!-- <div class="sidebar-user">
+          <a href="/">
+            <div class="wrapper">
+              <div class="avatar-24">
+                <img src="assets/images/img-user-01.jpg" alt="궁예" />
+              </div>
+              <strong class="username">사달라</strong>
+            </div>
+          </a>
+        </div> -->
+
+        <!-- NOTE: 로그인을 하지 않은 경우 -->
+        <div class="sidebar-auth">
+          <a href="/" class="auth-button btn-outlined btn-40">로그인</a>
+          <a href="/" class="auth-button btn-primary btn-40">회원가입</a>
+        </div>
+      </header>
+
+      <nav class="sidebar-nav">
+        <h2 class="visually-hidden">메뉴</h2>
+
+        <button class="sidebar-nav-button" type="button">
+          <i class="icon-menu ic-community" aria-hidden></i>
+          <span>커뮤니티</span>
+          <i class="icon-down ic-chevron" aria-hidden></i>
+        </button>
+        
+        <div>
+          <button class="sidebar-nav-button" type="button">
+            <i class="icon-menu ic-store" aria-hidden></i>
+            <span class="menu-text is-active">스토어</span>
+            <i class="icon-down ic-chevron" aria-hidden></i>
+          </button>
+  
+          <div class="drawer-menu">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item"><a href="/">스토어홈</a></li>
+              <li class="drawer-menu-item"><a href="/">카테고리</a></li>
+              <li class="drawer-menu-item"><a href="/">신혼가구</a></li>
+              <li class="drawer-menu-item"><a href="/">베스트</a></li>
+              <li class="drawer-menu-item"><a href="/">오늘의딜</a></li>
+              <li class="drawer-menu-item"><a href="/">연휴특가</a></li>
+              <li class="drawer-menu-item"><a href="/">월동준비</a></li>
+              <li class="drawer-menu-item"><a href="/">리퍼마켓</a></li>
+              <li class="drawer-menu-item">
+                <a href="/">기획전</a>
+                <i class="ic-new" lang="en" aria-label="New"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="sidebar-nav-button" type="button">
+          <i class="icon-menu ic-expert" aria-hidden></i>
+          <span>인테리어시공</span>
+          <i class="icon-down ic-chevron" aria-hidden></i>
+        </button>
+      </nav>
+
+      <!-- NOTE: 로그인을 한 경우 -->
+      <footer class="sidebar-user-menu">
+        <ul class="user-menu-list">
+          <li class="user-menu-item"><a href="/">마이페이지</a></li>
+          <li class="user-menu-item"><a href="/">나의 쇼핑</a></li>
+          <li class="user-menu-item"><a href="/">스크랩북</a></li>
+          <li class="user-menu-item"><a href="/">알림</a></li>
+          <li class="user-menu-item"><a href="/">이벤트</a></li>
+        </ul>
+      </footer>
+    </aside>
+  </div>
   </body>
 </html>
