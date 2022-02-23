@@ -58,57 +58,7 @@
   }
 
   &-nav {
-    width: 200px;
     margin-bottom: 16px;
-
-    &-button {
-      @include text-style(18);
-      position: relative;
-      display: block;
-      width: 100%;
-      padding: 13px 8px;
-      font-weight: 700;
-      text-align: start;
-      border-top: 1px solid $border;
-
-      .icon-menu {
-        width: 24px;
-        height: 24px;
-        margin-right: 8px;
-      }
-
-      .icon-down {
-        @include pos-center-y;
-        right: 8px;
-      }
-
-      &:hover span,
-      span.is-active {
-        color: $blue;
-      }
-    }
-  }
-
-  .drawer-menu {
-    &-item {
-      @include flexbox(start);
-      padding: 6px 12px;
-      margin-bottom: 8px;
-
-      &:hover,
-      &.is-active {
-        color: $blue;
-      }
-
-      a {
-        @include text-style(14);
-        font-weight: 700;
-      }
-
-      .ic-new {
-        color: $red;
-      }
-    }
   }
 
   .sidebar-user-menu {
@@ -118,7 +68,8 @@
       @include flexbox(start);
       @include text-style(14);
       width: 100%;
-      padding: 6px 12px;
+      padding: 0 12px;
+      height: 36px;
 
       &:hover {
         color: $blue;
