@@ -1,0 +1,128 @@
+.sidebar {
+  position: absolute;
+  top: 0;
+  width: 240px;
+  padding: 32px 20px;
+  background-color: $white;
+
+  &-header {
+    padding: 0 12px;
+
+    .logo {
+      @include flexbox(start);
+
+      img {
+        display: block;
+        height: 20px;
+        width: auto;
+      }
+    }
+  }
+
+  &-user,
+  &-auth {
+    height: 88px;
+  }
+
+  &-user {
+    padding: 32px 0;
+
+    a {
+      @include flexbox(start);
+      @include text-style(14);
+      width: 100%; // username이 가질 수 있는 최대 width 정의
+      font-weight: 700;
+
+      .avatar-24 {
+        flex-grow: 0;
+        flex-shrink: 0; // 늘어나지도 말고 줄어들지도 말아라
+        margin-right: 8px;
+      }
+
+      .username {
+        flex-grow: 1; // width 끝까지 차지해라 (width 고정하면 유지보수에 안좋음)
+        overflow: hidden;
+        text-overflow: ellipsis; // ...
+        white-space: nowrap; // 글자 길어도 두줄로XX 한줄로 나옴
+      }
+    }
+  }
+
+  &-auth {
+    @include flexbox(between);
+    padding: 24px 0;
+
+    .auth-button {
+      width: 84px;
+    }
+  }
+
+  &-nav {
+    width: 200px;
+    margin-bottom: 16px;
+
+    &-button {
+      @include text-style(18);
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 13px 8px;
+      font-weight: 700;
+      text-align: start;
+      border-top: 1px solid $border;
+
+      .icon-menu {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+
+      .icon-down {
+        @include pos-center-y;
+        right: 8px;
+      }
+
+      &:hover span,
+      span.is-active {
+        color: $blue;
+      }
+    }
+  }
+
+  .drawer-menu {
+    &-item {
+      @include flexbox(start);
+      padding: 6px 12px;
+      margin-bottom: 8px;
+
+      &:hover,
+      &.is-active {
+        color: $blue;
+      }
+
+      a {
+        @include text-style(14);
+        font-weight: 700;
+      }
+
+      .ic-new {
+        color: $red;
+      }
+    }
+  }
+
+  .sidebar-user-menu {
+    width: 200px;
+
+    .user-menu-item {
+      @include flexbox(start);
+      @include text-style(14);
+      width: 100%;
+      padding: 6px 12px;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}
