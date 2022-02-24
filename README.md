@@ -4,7 +4,7 @@
 
 - 로그인을 하지 않은 경우
 
-![unauthorized](assets/images/Unsignedin.png)
+![unauthorized](assets/images/UnsignedIn.png)
 
 ```html
 <div class="button-group">
